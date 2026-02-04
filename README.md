@@ -74,7 +74,7 @@ Alternatively, you can open `index.html` directly in your browser, though a loca
 ## 📝 Project Structure
 
 ```
-counter-strike-dima2/
+fps-game/
 ├── index.html      # Main HTML file with UI and controls
 ├── main.js         # Game logic, Three.js setup, and all game mechanics
 └── README.md       # Project documentation
@@ -147,17 +147,6 @@ counter-strike-dima2/
 - **Central Archway**: Dark tunnel structure in the middle
 - **Perimeter Walls**: Enclosed play area
 - **Cover Structures**: Multiple buildings and walls for tactical gameplay
-- **Weapon Spawns**: AK47, M4, MP5, and Sniper rifles on both sides
-
-## 📄 License
-
-This project is for educational purposes. Counter-Strike is a trademark of Valve Corporation.
-
-## 🙏 Acknowledgments
-
-- Inspired by Counter-Strike 1.6
-- Built with Three.js
-- Map design based on the classic dima2 map
 
 ## 🔧 Development
 
