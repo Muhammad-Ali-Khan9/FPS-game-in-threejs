@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 1.6 - dima2 in Three.js</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        #canvas-container {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            z-index: 100;
+        }
+        
+        #info h1 {
+            margin-bottom: 10px;
+            color: #ff6b00;
+        }
+        
+        #info p {
+            margin: 5px 0;
+        }
+        
+        #controls {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 100;
+        }
+        
+        #pause-menu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            border: 2px solid #ff6b00;
+            display: none;
+            z-index: 1000;
+            text-align: center;
+            min-width: 300px;
+        }
+        
+        #pause-menu h2 {
+            color: #ff6b00;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        
+        #pause-menu button {
+            background: #ff6b00;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 200px;
+            transition: background 0.3s;
+        }
+        
+        #pause-menu button:hover {
+            background: #ff8533;
+        }
+        
+        #pause-menu.active {
+            display: block;
+        }
+        
+        #crosshair {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            z-index: 200;
+            pointer-events: none;
+        }
+        
+        #crosshair::before,
+        #crosshair::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+        }
+        
+        #crosshair::before {
+            width: 2px;
+            height: 12px;
+            top: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        #crosshair::after {
+            width: 12px;
+            height: 2px;
+            left: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        /* Hide crosshair when paused */
+        #pause-menu.active ~ #crosshair {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div id="info">
+        <h1>🎮 FPS game in three.js</h1>
+
+    </div>
+    
+    <div id="controls">
+        <strong>FPS Controls:</strong><br>
+        Click to lock mouse and start<br>
+        Mouse: Look around<br>
+        Left Click: Shoot<br>
+        WASD: Move<br>
+        Space: Jump<br>
+        R: Reset position<br>
+        ESC: Pause/Unlock mouse
+    </div>
+    
+    <div id="pause-menu">
+        <h2>⏸ PAUSED</h2>
+        <button id="resume-btn">Resume</button>
+        <button id="reset-btn">Reset Position</button>
+    </div>
+    
+    <div id="crosshair"></div>
+    
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
