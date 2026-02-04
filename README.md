@@ -158,5 +158,3 @@ The project uses pure JavaScript with ES6 modules. No build process or dependenc
 - Firefox
 - Safari
 - Any browser with ES6 module support
-
-Enjoy exploring the classic dima2 map!
