@@ -1,4 +1,4 @@
-# Counter-Strike 1.6 - dima2 Map in Three.js
+# FPS game in threejs
 
 
 ## 📸 Screenshots
