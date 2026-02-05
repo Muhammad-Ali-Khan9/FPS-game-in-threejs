@@ -5,7 +5,7 @@
 
 ![Gameplay Screenshot 1](Screenshot%202026-02-04%20233004.png)
 
-![Gameplay Screenshot 2](Screenshot%202026-02-04%20233013.png)
+![Gameplay Screenshot 2](Screenshot%2026-02-05%114343.png)
 
 ## 🎮 Features
 
